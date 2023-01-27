@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+@media (min-width: 736px) {
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./Images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    gap: 70px;
+    background-color: hsl(230, 100%, 99%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    color: hsl(225, 20%, 60%);
+  }
+  
+  .logo {
+    background-image: url("./Images/pattern-circles.svg");
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 50px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .logo .title {
+    font-weight: 800;
+    font-size: 25px;
+    color: hsl(227, 35%, 25%);
+  }
+  
+  .content {
+    height: 400px;
+    width: 600px;
+    background-color: white;  
+    box-shadow: 0px 0px 20px #ddd;
+    border-radius: 5px;
+    display: grid;
+    grid-template: 4fr 2fr / 1fr;
+    overflow: hidden;
+  }
+  
+  .content .main-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 50px;
+  }
+  
+  .content .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content .money {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 5px;
+    color: hsl(227, 35%, 25%)
+  }
+  
+  .content .billing {
+    display: flex;
+    margin: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+  }
+  
+  .content .discount {
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    border-top: 1px solid hsl(223, 50%, 87%);
+  }
+  
+  .footer-components {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .footer .left {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .footer-components img {
+    width: 12px;
+    height: 10px;
+  }
+  
+  .footer .right button {
+    border: none;
+    padding: 12px 60px;
+    border-radius: 20px;
+    background-color: hsl(227, 35%, 25%);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }  
+}
+
+@media (max-width: 737px) {
+  .container {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./Images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    gap: 70px;
+    background-color: hsl(230, 100%, 99%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    color: hsl(225, 20%, 60%);
+  }
+
+  .logo {
+    background-image: url("./Images/pattern-circles.svg");
+    /* background-size: 150px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .logo .title {
+    font-weight: 800;
+    font-size: 20px;
+    color: hsl(227, 35%, 25%);
+  }
+
+  .logo .text{
+    white-space: pre-line;
+  }
+
+  .content {
+    height: 500px;
+    width: 90vw;
+    padding-bottom: 20px;
+    background-color: white;  
+    box-shadow: 0px 0px 20px #ddd;
+    border-radius: 5px;
+    display: grid;
+    grid-template: 4fr 3fr / 1fr;
+    overflow: hidden;
+  }
+
+  .content .upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .slider {
+    width: 80%;
+  }
+
+  .content .money {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 5px;
+    color: hsl(227, 35%, 25%)
+  }
+
+  
+  .content .billing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    gap: 10px;
+  }
+  
+  .content .discount {
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid hsl(223, 50%, 87%);
+  }
+
+  .footer .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-components {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer .right button {
+    border: none;
+    padding: 12px 60px;
+    border-radius: 20px;
+    background-color: hsl(227, 35%, 25%);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }  
+}
