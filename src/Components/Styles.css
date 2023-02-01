@@ -2,6 +2,7 @@
 
 @media (min-width: 736px) {
   .container {
+    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,6 @@
     background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 50px;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,11 @@
     font-weight: 800;
     font-size: 25px;
     color: hsl(227, 35%, 25%);
+  }
+  
+  .logo .text {
+    display: flex;
+    gap: 2px;
   }
   
   .content {
@@ -158,9 +163,6 @@
     color: hsl(227, 35%, 25%);
   }
 
-  .logo .text{
-    white-space: pre-line;
-  }
 
   .content {
     height: 500px;

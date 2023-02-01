@@ -47,6 +47,102 @@ const CustomToggle = styled(Switch)({
   
 }) as typeof Switch;
 
+function DesktopContent({value, handleSlider, checked, setChecked} : any) {
+
+  return (
+    <div className="content">
+      <div className="main-component">
+        <div className="upper">
+          <div className="text" style={{letterSpacing: "2px"}}>100K PAGEVIEWS</div>
+          <div style={{display: "flex", alignItems: "center"}}>
+            <div className="money">${value}</div>
+            <div className="text">/ month</div>
+          </div>
+        </div>
+        <div className="slider">
+          <CustomSlider step={0.01} defaultValue={value} onChange={handleSlider} />
+        </div>
+        <div className="billing">
+          <div className="text">Monthly billing</div>
+          <div className='toggle'>
+            <CustomToggle checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+          </div>
+          <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+            <div className="text">Yearly billing</div>
+            <div className="discount">25% discount</div>
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <div className="left">
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">Unlimited Websites</div>
+          </div>
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">100% data ownership</div>
+          </div>
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">Email reports</div>
+          </div>
+        </div>
+        <div className="right">
+          <button>Start my trial</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function MobileContent({value, handleSlider, checked, setChecked} : any) {
+
+  return (
+    <div className="content">
+      <div className="upper">
+        <div className="text" style={{letterSpacing: "2px"}}>100K PAGEVIEWS</div>
+        <div className="slider">
+          <CustomSlider step={0.01} min={0} max={50} value={value} onChange={handleSlider} />
+        </div>
+        <div style={{display: "flex", alignItems: "center"}}>
+          <div className="money">${value}</div>
+          <div className="text">/ month</div>
+        </div>
+        <div className="billing">
+          <div className="text">Monthly billing</div>
+          <div className='toggle'>
+            <CustomToggle checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+          </div>
+          <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
+            <div className="text">Yearly billing</div>
+            <div className="discount">-25%</div>
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <div className="left">
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">Unlimited Websites</div>
+          </div>
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">100% data ownership</div>
+          </div>
+          <div className="footer-components">
+            <img src={checks} />
+            <div className="text">Email reports</div>
+          </div>
+        </div>
+        <div className="right">
+          <button>Start my trial</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function Home() {
 
   const [value, setValue] : any = useState(16);
@@ -66,101 +162,6 @@ function Home() {
     window.addEventListener("resize", GetWidth);
   }, [width, value]);
   
-  function DesktopContent() {
-
-    return (
-      <div className="content">
-        <div className="main-component">
-          <div className="upper">
-            <div className="text" style={{letterSpacing: "2px"}}>100K PAGEVIEWS</div>
-            <div style={{display: "flex", alignItems: "center"}}>
-              <div className="money">${value}</div>
-              <div className="text">/ month</div>
-            </div>
-          </div>
-          <div className="slider">
-            <CustomSlider defaultValue={value} onChange={handleSlider} />
-          </div>
-          <div className="billing">
-            <div className="text">Monthly billing</div>
-            <div className='toggle'>
-              <CustomToggle checked={checked} onChange={(e) => setChecked(e.target.checked)} />
-            </div>
-            <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-              <div className="text">Yearly billing</div>
-              <div className="discount">25% discount</div>
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <div className="left">
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">Unlimited Websites</div>
-            </div>
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">100% data ownership</div>
-            </div>
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">Email reports</div>
-            </div>
-          </div>
-          <div className="right">
-            <button>Start my trial</button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-  
-  function MobileContent() {
-
-    return (
-      <div className="content">
-        <div className="upper">
-          <div className="text" style={{letterSpacing: "2px"}}>100K PAGEVIEWS</div>
-          <div className="slider">
-            {/* <CustomSlider min={0} max={50} value={value} onChange={handleSlider} /> */}
-          </div>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <div className="money">${value}</div>
-            <div className="text">/ month</div>
-          </div>
-          <div className="billing">
-            <div className="text">Monthly billing</div>
-            <div className='toggle'>
-              <CustomToggle checked={checked} onChange={(e) => setChecked(e.target.checked)} />
-            </div>
-            <div style={{display: "flex", alignItems: "center", gap: "5px"}}>
-              <div className="text">Yearly billing</div>
-              <div className="discount">-25%</div>
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <div className="left">
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">Unlimited Websites</div>
-            </div>
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">100% data ownership</div>
-            </div>
-            <div className="footer-components">
-              <img src={checks} />
-              <div className="text">Email reports</div>
-            </div>
-          </div>
-          <div className="right">
-            <button>Start my trial</button>
-          </div>
-        </div>
-      </div>
-    )
-  }
   
   return (
     <div className="container">
@@ -168,7 +169,7 @@ function Home() {
         <div className="title">Simple, traffic-based pricing</div>
         <div className="text"><div>Sign-up for our 30 day trial.</div> <div>No credit card required.</div></div>
       </div>
-      {width > 737 ? <DesktopContent /> : <MobileContent />}
+      {width > 737 ? <DesktopContent value={value} handleSlider={handleSlider} checked={checked} setChecked={setChecked} /> : <MobileContent value={value} handleSlider={handleSlider} checked={checked} setChecked={setChecked} />}
        
     </div>
   )
